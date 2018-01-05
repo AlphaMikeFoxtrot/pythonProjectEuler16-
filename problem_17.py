@@ -1,0 +1,22 @@
+import inflect
+
+engine = inflect.engine()
+
+final_string = ""
+
+for i in range(1, 1001):
+    final_string += engine.number_to_words(i)
+    final_string += " "
+string_list = final_string.split(' ')
+
+print(len(string_list))
+print (string_list)
+
+length = 0
+
+for i in string_list:
+    for j in i:
+        if not j == '-':
+            length += 1
+
+print (length)
