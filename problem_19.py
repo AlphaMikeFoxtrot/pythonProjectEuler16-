@@ -1,0 +1,13 @@
+import datetime
+import calendar
+
+## year = 1900
+flag = 0
+
+for year in range(1901, 2001):
+    for i in range(1, 13):
+        if(calendar.day_name[datetime.datetime(year, i, 1).weekday()] == 'Sunday' or calendar.day_name[datetime.datetime(year, i, 1).weekday()] == 'sunday'):
+            flag += 1
+        print ("\n\nyear : {}\tmonth : {}\tday : {}\tdayNum : {}".format(year, i, calendar.day_name[datetime.datetime(year, i, 1).weekday()], datetime.datetime(year, i, 1).day))
+
+print (flag)
